@@ -1,0 +1,67 @@
+.header {
+    width: 100%;
+    background-color: white;
+    z-index: 3;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    transition: 0.2s;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.menu .ancora {
+    display: inline-block;
+    padding: 14px 0px;
+    position: relative;
+    color: #004488;
+}
+
+.menu .ancora::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px;
+    background-color: #0059C3;
+    margin-top: 4px;
+    transition: 0.3s;
+    position: absolute;
+}
+
+.menu .ancora:hover:after {
+    width: 100%;
+}
+
+.js .header.ativo {
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    opacity: 0.95;
+    transition: 0.2s;
+}
+
+.js .ativo .logo {
+    width: 55px;
+    height: 55px;
+    transition: 0.2s;
+}

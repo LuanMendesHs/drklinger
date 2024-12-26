@@ -1,0 +1,5 @@
+@import "./global/global.css";
+@import "./global/header.css";
+@import "./global/componentes.css";
+@import "./pages/home/main.css";
+@import "./global/footer.css";
