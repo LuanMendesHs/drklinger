@@ -39,8 +39,8 @@ initEfeitoScrollSobre();
 const accordionList = document.querySelectorAll('.js-perguntas h4');
 
 function activeAccordion() {
-    this.classList.add('ativo');
-    this.nextElementSibling.classList.add('ativo');
+    this.classList.toggle('ativo');
+    this.nextElementSibling.classList.toggle('ativo');
 }
 
 accordionList.forEach((item) => {
