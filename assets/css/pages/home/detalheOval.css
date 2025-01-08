@@ -1,0 +1,30 @@
+.div_oval {
+    max-width: 1100px;
+    height: 220px;
+    margin: 0 auto;
+    background: linear-gradient(to left, #52A8FF 0%, #1E6FB3 85%);
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.div_oval .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.div_info div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.div_info img {
+    filter: invert(1);
+    width: 25px;
+    height: 25px;
+}

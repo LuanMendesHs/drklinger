@@ -1,10 +1,10 @@
-// inicio efeito header topo
-function initEfeitoHeader(){
+// inicio efeito header HOME topo
+function initEfeitoHeaderHome(){
     const header = document.getElementById("header-js");
-    const carrosel = document.querySelector(".carrosel");
+    const carrossel = document.querySelector(".carrossel");
     
     function menuTopo() {
-        const alturaTopo = carrosel.getBoundingClientRect().top;
+        const alturaTopo = carrossel.getBoundingClientRect().top;
         if(alturaTopo < 60) {
             header.classList.add('ativo');
         } else {
@@ -15,7 +15,27 @@ function initEfeitoHeader(){
     window.addEventListener('scroll', menuTopo);
 }
 
-initEfeitoHeader();
+initEfeitoHeaderHome();
+// fim efeito header topo
+
+// inicio efeito header SERVIÇOS topo
+function initEfeitoHeaderServicos(){
+    const header = document.getElementById("header-js");
+    const introducao = document.querySelector(".introducao");
+    
+    function menuTopo() {
+        const alturaTopo = introducao.getBoundingClientRect().top;
+        if(alturaTopo < 60) {
+            header.classList.add('ativo');
+        } else {
+            header.classList.remove('ativo');
+        }
+    }
+    
+    window.addEventListener('scroll', menuTopo);
+}
+
+initEfeitoHeaderServicos();
 // fim efeito header topo
 
 
@@ -35,8 +55,8 @@ function initEfeitoScrollSobre(){
 initEfeitoScrollSobre();
 // fim section sobre
 
-// inicio accordion perguntas frequentes
-const accordionList = document.querySelectorAll('.js-perguntas h4');
+// inicio accordion duvidas frequentes
+const accordionList = document.querySelectorAll('.js-duvidas h4');
 
 function activeAccordion() {
     this.classList.toggle('ativo');
@@ -48,4 +68,4 @@ accordionList.forEach((item) => {
 })
 
 
-// fim accordion perguntas frequentes
+// fim accordion duvidas frequentes

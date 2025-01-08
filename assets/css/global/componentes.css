@@ -27,6 +27,38 @@
     transition: 0.2s;
 }
 
+.botao_secundario {
+    background: #0079ff;
+    padding: 20px 50px;
+    margin-top: 60px;
+    margin-bottom: 75px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.botao_secundario:hover {
+    background: #1E6FB3;
+    padding: 20px 60px;
+}
+
+.botao_secundario::after {
+    content: "";
+    position: absolute;
+    left: 80%; /* Coloca o símbolo fora do link */
+    transform: translateX(-50%);
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s, transform 0.5s; /* Transições de opacidade e transform */
+}
+
+.botao_secundario:hover::after {
+    content: "➤"; /* Define o símbolo na interação */
+    opacity: 1; /* Faz o símbolo aparecer */
+    transform: translateX(5px); /* Move o símbolo para a direita */
+    transition: 0.2s;
+}
+
 .js .ativo .container {
     box-sizing: border-box;
     max-width: 1100px;

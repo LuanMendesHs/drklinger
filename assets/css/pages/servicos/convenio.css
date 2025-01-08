@@ -1,0 +1,26 @@
+.convenio {
+    padding: 80px 0 100px 0;
+}
+
+.convenio h3 {
+    text-align: center;
+    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #0079FF;
+    line-height: 1.6em;
+}
+
+.convenio_img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.convenio_img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 100px;
+}

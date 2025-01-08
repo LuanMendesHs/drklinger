@@ -1,5 +1,21 @@
+/* Global */
 @import "./global/global.css";
 @import "./global/header.css";
 @import "./global/componentes.css";
-@import "./pages/home/main.css";
 @import "./global/footer.css";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap');
+
+/* Home */
+@import "./pages/home/carrossel.css";
+@import "./pages/home/detalheOval.css";
+@import "./pages/home/quemSou.css";
+@import "./pages/home/qualificacoes.css";
+@import "./pages/home/servicos.css";
+@import "./pages/home/dicas.css";
+@import "./pages/home/duvidas.css";
+
+/* Serviços */
+@import "./pages/servicos/introducao.css";
+@import "./pages/servicos/habilidades.css";
+@import "./pages/servicos/atendimento.css";
+@import "./pages/servicos/convenio.css";

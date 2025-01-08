@@ -1,0 +1,57 @@
+.duvidas {
+    padding-bottom: 50px;
+}
+
+.duvidas .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.duvidas h2 {
+    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    color: #333;
+    margin-top: 80px;
+    margin-bottom: 15px;
+}
+
+.duvidas_subtitulo {
+    text-align: center;
+    color: #666666;
+    max-width: 60ch;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.duvidas .container div {
+    max-width: 450px;
+}
+
+.duvidas h4 {
+    color: #0059C3;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 35px 0 10px 0;
+    cursor: pointer;
+}
+
+.duvidas h4::after {
+    content: "▲";
+    margin-left: 10px;
+}
+.duvidas h4.ativo::after {
+    content: "▼";
+    margin-left: 10px;
+}
+
+.js .js-duvidas p {
+    display: none;
+    color: #666666;
+    font-size: 15px;
+}
+
+.js .js-duvidas p.ativo {
+    display: block;
+}

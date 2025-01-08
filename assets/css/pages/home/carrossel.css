@@ -1,0 +1,42 @@
+.carrossel {
+    margin: 0 auto;
+}
+
+.carrossel_div {
+    position: relative;
+}
+
+.carrossel_div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.carrossel_texto {
+    position: absolute;
+    top: 200px;
+    left: 50;
+    z-index: 2;
+}
+
+.carrossel_texto h2 {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 600;
+    max-width: 500px;
+    text-shadow: 0 0 1px #000;
+}
+
+.carrossel_texto p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    max-width: 500px;
+    text-shadow: 0 0 1px #000;
+    margin-top: 20px;
+}
