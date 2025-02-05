@@ -93,7 +93,7 @@ accordionList.forEach((item) => {
 // Inicio envio Whatsapp
 const botao = document.querySelectorAll('.js-botao');
 botao.forEach((item,index) => {
-    const phone = "+5588996231686";
+    const phone = "+5588996985943";
     const mensagemOla = "Olá, eu vim pelo site e gostaria de agendar uma consulta.";
     const message = encodeURIComponent(`${mensagemOla}`);
     item.addEventListener("click", () => {
