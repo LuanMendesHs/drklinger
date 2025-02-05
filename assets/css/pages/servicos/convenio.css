@@ -44,3 +44,10 @@
         width: 650px;
     }
 }
+
+@media (max-width: 650px) {
+    .convenio_img {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

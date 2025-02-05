@@ -57,6 +57,11 @@
     }
 }
 
-@media (max-width: 768px) {
-    
+@media (max-width: 400px) {
+    .carousel-item:first-child img {
+        object-position: 80% center;
+    }
+    .carousel-item:nth-child(2) img {
+        object-position: 60% center; /* Ajuste personalizado para a segunda imagem */
+    }
 }

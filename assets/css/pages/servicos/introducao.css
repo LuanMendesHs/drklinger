@@ -61,6 +61,18 @@ h1 {
     .introducao {
         background: url("");
         background-color: #CBDFFF;
-        height: 850px;
+        height: 950px;
+    }
+}
+
+@media (max-width: 450px) {
+    .introducao {
+        height: 1100px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 48px;
     }
 }

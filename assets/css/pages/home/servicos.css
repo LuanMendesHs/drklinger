@@ -94,3 +94,12 @@
         font-size: 20px;
     }
 }
+
+@media (max-width: 400px) {
+    .servicos_info h4 {
+        font-size: 20px;
+    }
+    .servicos_info div a {
+        font-size: 16px;
+    }
+}

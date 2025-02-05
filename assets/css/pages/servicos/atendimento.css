@@ -122,3 +122,42 @@
         padding: 0px 10px 50px 10px;
     }
 }
+
+@media (max-width: 550px) {
+    .atendimento_info_primario h2 {
+        font-size: 25px;
+        padding-right: 0px;
+    }
+    .atendimento_info_primario {
+        width: 95%;
+        text-align: center;
+        padding-left: 50px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .atendimento_horario {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .atendimento_info_horario {
+        margin-bottom: 50px;
+        margin-left: 0px;
+    }
+    .atendimento_info_secundario {
+        width: 95%;
+    }
+    .atendimento_info_secundario p {
+        width: 38ch;
+    }
+}
+
+@media (max-width: 420px) {
+    .atendimento_info_secundario h2 {
+        font-size: 35px;
+    }
+    .atendimento_info_secundario p {
+        width: 28ch;
+        margin-bottom: 0px;
+    }
+}

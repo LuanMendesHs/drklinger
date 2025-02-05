@@ -69,3 +69,11 @@
         margin: 20px 50px;
     }
 }
+@media (max-width: 400px) {
+    .sobre img {
+        height: 450px;
+    }
+    .sobre p {
+        margin: 20px 10px;
+    }
+}

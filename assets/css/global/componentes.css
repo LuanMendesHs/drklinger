@@ -40,13 +40,13 @@
 
 .botao_secundario:hover {
     background: #1E6FB3;
-    padding: 20px 60px;
+    padding: 20px 105px;
 }
 
 .botao_secundario::after {
     content: "";
     position: absolute;
-    left: 80%; /* Coloca o símbolo fora do link */
+    left: 75%; /* Coloca o símbolo fora do link */
     transform: translateX(-50%);
     opacity: 0; /* Começa invisível */
     transition: opacity 0.5s, transform 0.5s; /* Transições de opacidade e transform */
@@ -96,4 +96,23 @@
     .js .ativo .botao {
         padding: 20px 105px;
     } 
+}
+
+@media (max-width: 470px) {
+    .botao {
+        padding: 15px 70px;
+    }
+    .js .ativo .botao {
+        padding: 15px 70px;
+    } 
+    .botao_secundario {
+        padding: 20px 50px;
+    }
+    .botao_secundario:hover {
+        background: #1E6FB3;
+        padding: 20px 50px;
+    }
+    .botao_secundario::after {
+        left: 82%;
+    }
 }

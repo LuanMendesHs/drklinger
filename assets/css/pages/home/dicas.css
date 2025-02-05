@@ -61,14 +61,12 @@
         text-align: center;
         height: 650px;
     }
-    /* .dicas h2 {
-        font-size: 36px;
-    }
-    .dicas h3 {
-        font-size: 28px;
-    } */
     .dicas p {
-        /* font-size: 18px; */
         margin: 0 auto;
+    }
+}
+@media (max-width: 400px) {
+    .dicas {
+        height: 750px;
     }
 }
