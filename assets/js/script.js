@@ -62,7 +62,7 @@ initEfeitoHamburguer();
 // inicio section sobre
 function initEfeitoScrollSobre(){
     const sobre = document.querySelector('.sobre');
-    const windowMetade = window.innerHeight * 0.6;
+    const windowMetade = window.innerHeight * 0.8;
     
     function sobreScrollEfect() {
         const sobreTopo = sobre.getBoundingClientRect().top - windowMetade;
