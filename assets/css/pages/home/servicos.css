@@ -60,3 +60,37 @@
     opacity: 1; /* Faz o símbolo aparecer */
     transform: translateX(5px); /* Move o símbolo para a direita */
 }
+
+@media (max-width: 768px) {
+
+    .servicos .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    .servicos_img {
+        height: 600px;
+        border-radius: 50px 0px 0 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        padding: 0px 0px;
+    }
+    
+    .servicos_info {
+        height: 600px;
+        border-radius: 0 50px 50px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        padding: 0px 0px;
+    }
+
+    .servicos_info h4 {
+        font-size: 26px;
+        height: 0px;
+        margin-bottom: 10px;
+    }
+    .servicos_info div a {
+        font-size: 20px;
+    }
+}

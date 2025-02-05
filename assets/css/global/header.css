@@ -14,6 +14,7 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    position: relative;
 }
 
 .logo {
@@ -26,6 +27,19 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+}
+
+.lista_hamburguer {
+    display: none;
+    width: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    z-index: 5;
+    padding: 20px 10px;    
 }
 
 .menu .ancora {
@@ -64,4 +78,55 @@
     width: 55px;
     height: 55px;
     transition: 0.2s;
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+    }
+    .icon {
+        width: 40px;
+        height: 30px;
+        margin: 10px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .linha {
+        width: 33px;
+        height: 5px;
+        background-color: #003EAA;
+        transition: .2s;
+    }
+
+    .linha1 {
+        transform: rotateZ(0deg);
+        transform-origin: left bottom;
+    }
+    .linha3 {
+        transform: rotateZ(0deg);
+        transform-origin: left top;
+    }
+
+    .js .ativa .linha1 {
+        transform:rotateZ(45deg);
+        transform-origin: left bottom;
+    }
+    .js .ativa .linha2 {
+        width: 0;
+    }
+    .js .ativa .linha3 {
+        transform: rotateZ(-45deg);
+    }
+    .js .lista_hamburguer.ativa {
+        display: grid;
+    }
+    .js .lista_hamburguer.ativa a {
+        margin-bottom: 20px;
+    }
+    .js .lista_hamburguer.ativo {
+        top: 70px;
+    }
 }

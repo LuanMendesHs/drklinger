@@ -16,7 +16,7 @@
 }
 
 .atendimento_info_primario {
-    width: 33%;
+    width: 37%;
     padding-left: 50px;
     padding-bottom: 50px;
 }
@@ -42,6 +42,7 @@
 }
 
 .atendimento_detalhe {
+    margin-top: 5px;
     margin-bottom: 15px;
 }
 
@@ -86,4 +87,38 @@
     font-weight: 500;
     width: 58ch;
     margin: 0 auto;
+}
+
+@media (max-width: 1270px) {
+    .atendimento .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .atendimento_info_primario {
+        width: 100%;
+        text-align: center;
+        padding-left: 50px;
+        padding-bottom: 50px;
+    }
+    .atendimento_horario {
+        justify-content: center;
+    }
+    .atendimento_info_horario {
+        margin-left: 200px;
+    }
+    .atendimento_info_secundario {
+        color: #ffffff;
+        text-align: center;
+        background-color: #003EAA;
+        width: 98%;
+        padding: 50px 0px 0px 0px; 
+        border-radius: 25px 25px 25px 25px;
+        box-shadow: 10px 14px 80px 7px rgba(0, 51, 102, 0.3);
+    }
+}
+
+@media (max-width: 768px) {
+    .atendimento_info_primario {
+        padding: 0px 10px 50px 10px;
+    }
 }

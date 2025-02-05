@@ -53,3 +53,22 @@
     font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
     line-height: 1.5em; 
 }
+
+@media (max-width: 995px) {
+    .dicas {
+        background: url("");
+        background-color: #CBDFFF;
+        text-align: center;
+        height: 650px;
+    }
+    /* .dicas h2 {
+        font-size: 36px;
+    }
+    .dicas h3 {
+        font-size: 28px;
+    } */
+    .dicas p {
+        /* font-size: 18px; */
+        margin: 0 auto;
+    }
+}

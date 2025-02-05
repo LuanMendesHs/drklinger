@@ -2,13 +2,16 @@
 function initEfeitoHeaderHome(){
     const header = document.getElementById("header-js");
     const carrossel = document.querySelector(".carrossel");
+    const ul = document.querySelector('.lista_hamburguer');
     
     function menuTopo() {
         const alturaTopo = carrossel.getBoundingClientRect().top;
         if(alturaTopo < 60) {
             header.classList.add('ativo');
+            ul.classList.add('ativo');
         } else {
             header.classList.remove('ativo');
+            ul.classList.remove('ativo');
         }
     }
     
@@ -22,13 +25,16 @@ initEfeitoHeaderHome();
 function initEfeitoHeaderServicos(){
     const header = document.getElementById("header-js");
     const introducao = document.querySelector(".introducao");
+    const ul = document.querySelector('.lista_hamburguer');
     
     function menuTopo() {
         const alturaTopo = introducao.getBoundingClientRect().top;
         if(alturaTopo < 60) {
             header.classList.add('ativo');
+            ul.classList.add('ativo');
         } else {
             header.classList.remove('ativo');
+            ul.classList.remove('ativo');
         }
     }
     
@@ -37,6 +43,20 @@ function initEfeitoHeaderServicos(){
 
 initEfeitoHeaderServicos();
 // fim efeito header topo
+
+// Inicio hamburguer
+
+function initEfeitoHamburguer() {
+    const icon = document.querySelector('.icon');
+    const ul = document.querySelector('.lista_hamburguer');
+    icon.addEventListener('click', () => {
+        icon.classList.toggle('ativa');
+        ul.classList.toggle('ativa');
+    })
+}
+initEfeitoHamburguer();
+
+// Fim hamburguer
 
 
 // inicio section sobre

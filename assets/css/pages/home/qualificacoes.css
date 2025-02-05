@@ -32,3 +32,22 @@
 .qualificacoes_info p {
     color: #666666;
 }
+
+@media (max-width: 995px) {
+    .qualificacoes .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .qualificacoes {
+        background: linear-gradient(#f1f1f1 0%, #ffffff 50%);
+        width: 100%;
+        height: 600px;
+        align-content: center;
+    }
+
+    .qualificacoes_info {
+        margin-top: 80px;
+    }
+}

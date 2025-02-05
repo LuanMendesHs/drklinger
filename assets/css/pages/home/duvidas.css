@@ -55,3 +55,17 @@
 .js .js-duvidas p.ativo {
     display: block;
 }
+
+@media (max-width: 768px) {
+    .duvidas .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .duvidas .container div {
+        margin: 0 auto;
+    }
+    .duvidas_subtitulo {
+        margin-bottom: 20px;
+    }
+}

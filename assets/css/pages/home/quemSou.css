@@ -31,3 +31,41 @@
     color: #666666;
     text-align: justify;
 }
+
+@media (max-width: 945px) {
+    .js .sobre.ativo {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .sobre img {
+        margin: 0 auto;
+        border-radius: 60px;
+    }
+    .sobre p {
+        font-size: 18px;
+        max-width: 100vw;
+        margin: 20px 50px;
+    }  
+}
+
+@media (max-width: 768px) {
+    .js .sobre.ativo {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .sobre img {
+        margin: 0 auto;
+        border-radius: 60px;
+    }
+    .sobre p {
+        font-size: 18px;
+        max-width: 100vw;
+        margin: 20px 50px;
+    }
+}

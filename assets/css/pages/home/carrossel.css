@@ -40,3 +40,23 @@
     text-shadow: 0 0 1px #000;
     margin-top: 20px;
 }
+
+@media (max-width: 1000px) {
+    .carousel-inner {
+        min-height: 650px;
+    }
+    
+    .carousel-item {
+        height: 100vh; /* Faz com que o carrossel ocupe 100% da altura da tela */
+    }
+    
+    .carousel-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; /* Garante que a imagem cubra toda a área sem deformar */
+    }
+}
+
+@media (max-width: 768px) {
+    
+}

@@ -11,14 +11,15 @@
 }
 
 .div_oval .container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
 }
 
 .div_info div {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     margin-bottom: 10px;
 }
