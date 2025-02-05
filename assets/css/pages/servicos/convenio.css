@@ -35,14 +35,7 @@
         justify-items: center;
         justify-self: center;
         padding-top: 70px;
-        width: 900px;
     } 
-}
-
-@media (max-width: 768px) {
-    .convenio_img {
-        width: 650px;
-    }
 }
 
 @media (max-width: 650px) {
