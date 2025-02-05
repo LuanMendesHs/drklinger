@@ -87,5 +87,20 @@ accordionList.forEach((item) => {
     item.addEventListener('click', activeAccordion);
 })
 
-
 // fim accordion duvidas frequentes
+
+
+// Inicio envio Whatsapp
+const botao = document.querySelectorAll('.js-botao');
+botao.forEach((item,index) => {
+    const phone = "+5588996231686";
+    const mensagemOla = "Olá, eu vim pelo site e gostaria de agendar uma consulta.";
+    const message = encodeURIComponent(`${mensagemOla}`);
+    item.addEventListener("click", () => {
+
+        window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    })
+    
+})
+
+// Fim envio Whatsapp
