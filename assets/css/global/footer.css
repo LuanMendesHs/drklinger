@@ -8,15 +8,15 @@ footer {
 footer .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     color: white;
 }
 
 .footer_logo {
-    width: 100px;
-    height: 100px;
-    margin: 0 0 0 20%;
-    margin-bottom: 30px;
+    width: 200px;
+    height: 130px;
+    margin: 0 0 0 5%;
+    margin-bottom: 10px;
 }
 
 .footer_div {
@@ -106,7 +106,7 @@ footer .container {
         padding-top: 10px;
     }
     .footer_logo {
-        width: 150px;
+        width: 220px;
         height: 150px;
         margin: 0 auto;
         margin-bottom: 20px;

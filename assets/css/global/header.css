@@ -18,7 +18,7 @@
 }
 
 .logo {
-    width: 80px;
+    width: 200px;
     height: 80px;
     transition: 0.2s;
 }
@@ -75,7 +75,7 @@
 }
 
 .js .ativo .logo {
-    width: 55px;
+    width: 125px;
     height: 55px;
     transition: 0.2s;
 }
