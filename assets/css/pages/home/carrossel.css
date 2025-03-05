@@ -57,6 +57,17 @@
     }
 }
 
+@media (max-width: 762px) {
+    .carrossel_texto h2 {
+        font-size: 42px;
+        max-width: 350px;
+    }
+    .carrossel_texto p {
+        font-size: 20px;
+        max-width: 350px;
+    }
+}
+
 @media (max-width: 400px) {
     .carousel-item:first-child img {
         object-position: 80% center;
