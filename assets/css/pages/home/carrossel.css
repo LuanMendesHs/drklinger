@@ -63,7 +63,7 @@
         max-width: 350px;
     }
     .carrossel_texto p {
-        font-size: 20px;
+        font-size: 18px;
         max-width: 350px;
     }
 }
@@ -74,5 +74,12 @@
     }
     .carousel-item:nth-child(2) img {
         object-position: 60% center; /* Ajuste personalizado para a segunda imagem */
+    }
+    .carrossel_texto h2 {
+        font-size: 35px;
+        max-width: 300px;
+    }
+    .carrossel_texto p {
+        max-width: 300px;
     }
 }
