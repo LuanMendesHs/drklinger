@@ -1,31 +1,11 @@
 // ============================================================
-// Efeito header ao scroll
+// Header sempre fixo com ativo (mesmo comportamento em todas as páginas)
 // ============================================================
-function initEfeitoHeader() {
+(function () {
     const header = document.getElementById("header-js");
     if (!header) return;
-
-    const carrossel = document.querySelector(".carrossel");
-    const introducao = document.querySelector(".introducao");
-    const ul = document.querySelector('.lista_hamburguer');
-    const referencia = carrossel || introducao;
-    if (!referencia) return;
-
-    function menuTopo() {
-        const alturaTopo = referencia.getBoundingClientRect().top;
-        if (alturaTopo < 60) {
-            header.classList.add('ativo');
-            if (ul) ul.classList.add('ativo');
-        } else {
-            header.classList.remove('ativo');
-            if (ul) ul.classList.remove('ativo');
-        }
-    }
-
-    window.addEventListener('scroll', menuTopo);
-}
-
-initEfeitoHeader();
+    header.classList.add('ativo');
+})();
 
 // ============================================================
 // Menu hamburguer
@@ -182,45 +162,41 @@ accordionList.forEach(item => {
 
 // ============================================================
 // Nav: marca link ativo conforme a página atual
-// Compatível com Vercel Clean URLs (/servicos em vez de /servicos.html)
+// Usa URLs absolutas para funcionar em qualquer host (Vercel, local, etc.)
 // ============================================================
 function initNavAtivo() {
     const links = document.querySelectorAll('.menu .ancora');
     if (!links.length) return;
 
-    // Remove .html e barra final do pathname para normalizar
-    // Ex: /servicos.html → /servicos  |  /servicos → /servicos
-    const path = window.location.pathname
-        .replace(/\.html$/, '')
-        .replace(/\/$/, '') || '/';
-
-    const partes = path.split('/').filter(Boolean);
-    const pagina = partes[partes.length - 1] || '';       // último segmento
-    const pasta  = partes.length >= 2 ? partes[partes.length - 2] : ''; // penúltimo
-
-    // Mapa: nome da página/pasta → arquivo do nav
-    const mapa = {
-        'home':         'home.html',
-        'sobre':        'sobre.html',
-        'servicos':     'servicos.html',
-        'antes-depois': 'antes-depois.html',
-        'blog':         'blog.html',
-        'artigos':      'blog.html',
-        'contato':      'contato.html',
-    };
-
-    let alvo = null;
-    for (const [chave, href] of Object.entries(mapa)) {
-        if (pagina === chave || pasta === chave) {
-            alvo = href;
-            break;
-        }
+    // Normaliza URL: remove .html e barra final
+    function norm(url) {
+        return url.replace(/\.html(\?|#|$)/, '$1').replace(/\/$/, '');
     }
 
+    const current = norm(window.location.href);
+
+    // Sub-pastas que mapeiam para um item de nav pai
+    // Ex: /artigos/escovacao → marcar Blog; /servicos/aparelho-safira → marcar Serviços
+    const subPastas = {
+        '/artigos/': 'blog',
+        '/servicos/': 'servicos',
+    };
+
     links.forEach(link => {
-        const href = (link.getAttribute('href') || '').replace(/^(\.\.\/|\.\/)*/, '');
-        if (alvo && href === alvo) {
+        if (!link.href) return;
+        const linkNorm = norm(link.href);
+
+        // Correspondência direta (mesma página)
+        if (current === linkNorm) {
             link.classList.add('ancora--ativa');
+            return;
+        }
+
+        // Correspondência por sub-pasta
+        for (const [pasta, paginaPai] of Object.entries(subPastas)) {
+            if (current.includes(pasta) && linkNorm.endsWith('/' + paginaPai)) {
+                link.classList.add('ancora--ativa');
+            }
         }
     });
 }

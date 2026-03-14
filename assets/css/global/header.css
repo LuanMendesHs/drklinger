@@ -26,9 +26,8 @@
 }
 
 .logo {
-    width: 180px;
-    height: 72px;
-    transition: all 0.3s ease;
+    width: 150px;
+    height: 60px;
     object-fit: contain;
 }
 
@@ -115,11 +114,6 @@
     z-index: 200;
 }
 
-.js .ativo .logo {
-    width: 130px;
-    height: 52px;
-    transition: all 0.3s ease;
-}
 
 @media (max-width: 768px) {
     .nav ul {
