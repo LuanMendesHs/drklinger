@@ -1,81 +1,110 @@
 .habilidades {
-    background-color: #f8f8f8;
-    padding-bottom: 150px;
+    background-color: var(--bg-soft);
+    padding: 80px 0 100px;
 }
 
 .habilidades_container_card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    gap: 24px;
+    margin-top: 8px;
 }
 
 .habilidades_card {
-    padding: 20px;
-    width: 90%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0px 40px 60px 0px rgba(0, 64, 135, .06);
-    text-align: center;
+    padding: 32px 28px;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    background-color: var(--bg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.habilidades_card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.habilidades_card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-blue);
+    transform: translateY(-4px);
+}
+
+.habilidades_card:hover::after {
+    transform: scaleX(1);
 }
 
 .habilidades_card img {
-    margin: 0 auto;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+    padding: 12px;
+    background: var(--bg-blue);
+    border-radius: var(--radius);
 }
 
 .habilidades_card h3 {
-    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 20px;
-    color: #0059C3;
-    line-height: 1.6em;
-    margin-top: 25px;
-    margin-bottom: 10px;
+    color: var(--dark);
+    line-height: 1.4;
+    margin-bottom: 12px;
 }
 
 .habilidades_card p {
-    font-size: 17px;
-    color: #666;
-    line-height: 1.7em;
-    font-weight: 500;
-    padding-bottom: 10px;
-    text-align: justify;
-    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.75;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 .habilidades_card a {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #1E6FB3;
-    position: relative; /* Necessário para o ::after */
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
 }
 
 .habilidades_card a::after {
-    content: "";
-    position: absolute;
-    left: 100%; /* Coloca o símbolo fora do link */
-    transform: translateX(-50%);
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.5s, transform 0.5s; /* Transições de opacidade e transform */
+    content: "→";
+    transition: transform 0.2s ease;
+}
+
+.habilidades_card a:hover {
+    color: var(--primary-dark);
 }
 
 .habilidades_card a:hover::after {
-    content: "➤"; /* Define o símbolo na interação */
-    opacity: 1; /* Faz o símbolo aparecer */
-    transform: translateX(5px); /* Move o símbolo para a direita */
+    transform: translateX(4px);
 }
 
 @media (max-width: 768px) {
-    .habilidades_container_card {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .habilidades {
+        padding: 64px 0 80px;
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
     .habilidades_container_card {
         display: grid;
         grid-template-columns: 1fr;
-        margin-left: 10%
     }
 }

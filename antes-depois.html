@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veja os resultados dos tratamentos ortodônticos do Dr. Klinger - Antes e Depois reais.">
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Resultados | Dr. Klinger Ortodontista</title>
+</head>
+<body>
+    <header class="header ativo" id="header-js">
+        <div class="container menu" id="menu-js">
+            <a href="./home.html"><img class="logo" src="./assets/img/Nova_Logo_Preta.png" alt="Logo Dr. Klinger"></a>
+            <nav class="nav">
+                <div class="icon">
+                    <div class="linha linha1"></div>
+                    <div class="linha linha2"></div>
+                    <div class="linha linha3"></div>
+                </div>
+                <div class="lista_hamburguer">
+                    <li><a class="ancora" href="./home.html">Início</a></li>
+                    <li><a class="ancora" href="./sobre.html">Sobre</a></li>
+                    <li><a class="ancora" href="./servicos.html">Serviços</a></li>
+                    <li><a class="ancora" href="./antes-depois.html">Resultados</a></li>
+                    <li><a class="ancora" href="./blog.html">Blog</a></li>
+                    <li><a class="ancora" href="./contato.html">Contato</a></li>
+                    <button class="js-botao botao">Agendar Consulta</button>
+                </div>
+                <ul>
+                    <li><a class="ancora" href="./home.html">Início</a></li>
+                    <li><a class="ancora" href="./sobre.html">Sobre</a></li>
+                    <li><a class="ancora" href="./servicos.html">Serviços</a></li>
+                    <li><a class="ancora" href="./antes-depois.html">Resultados</a></li>
+                    <li><a class="ancora" href="./blog.html">Blog</a></li>
+                    <li><a class="ancora" href="./contato.html">Contato</a></li>
+                    <button class="js-botao botao">Agendar Consulta</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="pagina_hero">
+            <div class="pagina_hero_overlay"></div>
+            <div class="container pagina_hero_content">
+                <span class="pagina_hero_badge">Transformações reais</span>
+                <h1 class="pagina_hero_titulo">Resultados que<br>falam por si</h1>
+                <p class="pagina_hero_subtitulo">Conheça os casos tratados e veja como a ortodontia pode transformar sorrisos e vidas.</p>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="ad_filtros_section">
+            <div class="container">
+                <div class="ad_filtros">
+                    <button class="ad_filtro ativo" data-filtro="todos">Todos</button>
+                    <button class="ad_filtro" data-filtro="safira">Aparelho de Safira</button>
+                    <button class="ad_filtro" data-filtro="autoligado">Auto-ligado</button>
+                    <button class="ad_filtro" data-filtro="infantil">Ortodontia Infantil</button>
+                    <button class="ad_filtro" data-filtro="metalico">Aparelho Metálico</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de casos -->
+        <section class="ad_galeria">
+            <div class="container">
+                <div class="ad_grid">
+
+                    <!-- Caso 1 -->
+                    <div class="ad_card" data-categoria="safira">
+                        <div class="ad_comparacao">
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--antes">
+                                    <span class="ad_label_img">Antes</span>
+                                </div>
+                            </div>
+                            <div class="ad_divisor">→</div>
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--depois">
+                                    <span class="ad_label_img">Depois</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad_card_info">
+                            <span class="ad_tag">Aparelho de Safira</span>
+                            <h3>Correção de apinhamento</h3>
+                            <p>Tratamento de 18 meses com aparelho de safira. Alinhamento completo e sorriso mais harmonioso.</p>
+                            <div class="ad_card_detalhe">
+                                <span>⏱ 18 meses</span>
+                                <span>✓ Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caso 2 -->
+                    <div class="ad_card" data-categoria="autoligado">
+                        <div class="ad_comparacao">
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--antes">
+                                    <span class="ad_label_img">Antes</span>
+                                </div>
+                            </div>
+                            <div class="ad_divisor">→</div>
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--depois">
+                                    <span class="ad_label_img">Depois</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad_card_info">
+                            <span class="ad_tag">Auto-ligado</span>
+                            <h3>Mordida cruzada anterior</h3>
+                            <p>Correção de mordida cruzada com aparelho auto-ligado em 14 meses de tratamento.</p>
+                            <div class="ad_card_detalhe">
+                                <span>⏱ 14 meses</span>
+                                <span>✓ Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caso 3 -->
+                    <div class="ad_card" data-categoria="infantil">
+                        <div class="ad_comparacao">
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--antes">
+                                    <span class="ad_label_img">Antes</span>
+                                </div>
+                            </div>
+                            <div class="ad_divisor">→</div>
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--depois">
+                                    <span class="ad_label_img">Depois</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad_card_info">
+                            <span class="ad_tag">Ortodontia Infantil</span>
+                            <h3>Interceptação precoce</h3>
+                            <p>Tratamento interceptivo em criança de 8 anos, prevenindo necessidade de cirurgia futura.</p>
+                            <div class="ad_card_detalhe">
+                                <span>⏱ 12 meses</span>
+                                <span>✓ Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caso 4 -->
+                    <div class="ad_card" data-categoria="metalico">
+                        <div class="ad_comparacao">
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--antes">
+                                    <span class="ad_label_img">Antes</span>
+                                </div>
+                            </div>
+                            <div class="ad_divisor">→</div>
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--depois">
+                                    <span class="ad_label_img">Depois</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad_card_info">
+                            <span class="ad_tag">Aparelho Metálico</span>
+                            <h3>Diastema central</h3>
+                            <p>Fechamento de espaços e nivelamento completo dos dentes com aparelho metálico convencional.</p>
+                            <div class="ad_card_detalhe">
+                                <span>⏱ 22 meses</span>
+                                <span>✓ Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caso 5 -->
+                    <div class="ad_card" data-categoria="safira">
+                        <div class="ad_comparacao">
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--antes">
+                                    <span class="ad_label_img">Antes</span>
+                                </div>
+                            </div>
+                            <div class="ad_divisor">→</div>
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--depois">
+                                    <span class="ad_label_img">Depois</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad_card_info">
+                            <span class="ad_tag">Aparelho de Safira</span>
+                            <h3>Protrusão dentária</h3>
+                            <p>Retração de dentes projetados e harmonização do perfil facial com aparelho estético de safira.</p>
+                            <div class="ad_card_detalhe">
+                                <span>⏱ 20 meses</span>
+                                <span>✓ Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caso 6 -->
+                    <div class="ad_card" data-categoria="autoligado">
+                        <div class="ad_comparacao">
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--antes">
+                                    <span class="ad_label_img">Antes</span>
+                                </div>
+                            </div>
+                            <div class="ad_divisor">→</div>
+                            <div class="ad_lado">
+                                <div class="ad_placeholder ad_placeholder--depois">
+                                    <span class="ad_label_img">Depois</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad_card_info">
+                            <span class="ad_tag">Auto-ligado</span>
+                            <h3>Apinhamento severo</h3>
+                            <p>Caso complexo de apinhamento severo resolvido com aparelho auto-ligado de alta tecnologia.</p>
+                            <div class="ad_card_detalhe">
+                                <span>⏱ 24 meses</span>
+                                <span>✓ Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Aviso sobre fotos -->
+                <div class="ad_aviso">
+                    <p>📸 As fotos dos casos reais serão adicionadas em breve. Entre em contato para conhecer mais resultados.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="sobre_cta">
+            <div class="container">
+                <h2>Quer fazer parte dos nossos casos de sucesso?</h2>
+                <p>Agende uma avaliação gratuita e descubra o melhor tratamento para o seu sorriso.</p>
+                <button class="js-botao botao">Agendar Avaliação Gratuita</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer_div">
+                <img class="footer_logo" src="./assets/img/Nova_Logo_Branca.png" alt="Logo Dr. Klinger">
+                <p class="footer_texto">Um dentista referência traz uma experiência mais agradável de tratamento odontológico para os seus pacientes.</p>
+                <p class="footer_texto_info">Dentista-Ortodontista Klinger · CRO 7550</p>
+            </div>
+            <div class="footer_div">
+                <h3>Contatos</h3>
+                <p>Clínica Dr. Caetano Neto<br/>(88) 9.9670-6541</p>
+                <p style="margin: 12px 0;">Clínica Dra. Kallyne Menezes<br/>(88) 9.9963-5005</p>
+                <p>Klinger de Melo<br/>(88) 9.9698-5943</p>
+                <div class="redes">
+                    <a href="#"><img src="./assets/img/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="./assets/img/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="./assets/img/twitter.svg" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&#9400; 2025 · Dr. Klinger. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        // Filtro de categorias
+        const filtros = document.querySelectorAll('.ad_filtro');
+        const cards = document.querySelectorAll('.ad_card');
+
+        filtros.forEach(filtro => {
+            filtro.addEventListener('click', () => {
+                filtros.forEach(f => f.classList.remove('ativo'));
+                filtro.classList.add('ativo');
+
+                const categoria = filtro.dataset.filtro;
+                cards.forEach(card => {
+                    if (categoria === 'todos' || card.dataset.categoria === categoria) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeInCard 0.35s ease both';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,164 +1,112 @@
 .atendimento {
-    background-color: #f8f8f8;
-    padding-bottom: 100px;
+    background-color: var(--bg-soft);
+    padding-bottom: 96px;
+    overflow: hidden;
 }
 
-.atendimento .container {
-    max-width: 1600px;
-    display: flex;
-    justify-content: space-around;
-    background-color: #ffffff;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 100px;
-    border-radius: 0px 0px 150px 150px;
-    box-shadow: 0px 60px 60px 0px rgba(0, 64, 135, 0.06);
+/* Remove restrições do container para o azul sangrar à esquerda */
+.atendimento > .container {
+    max-width: 100%;
+    padding: 0;
+    display: block;
 }
 
-.atendimento_info_primario {
-    width: 37%;
-    padding-left: 50px;
-    padding-bottom: 50px;
-}
-
-.atendimento_info_primario h2 {
-    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 1.4em;
-    margin: 0 auto;
-    padding-top: 15px;
-    padding-bottom: 10px;
-}
-
-.atendimento_info_primario p {
-    font-size: 18px;
-}
-
-.atendimento_horario {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-}
-
-.atendimento_detalhe {
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-
-.atendimento_info_horario h4{
-    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: #0059C3;
-    line-height: 1.6em;
-    margin-bottom: 15px;
-}
-
-.atendimento_info_horario p{
-    margin-bottom: 10px;
-}
-
+/* Seção azul: da borda esquerda até ~72% da largura */
 .atendimento_info_secundario {
     color: #ffffff;
     text-align: center;
-    background-color: #003EAA;
-    /* width: 60%; */
-    width: 90%;
-    padding: 50px 0px 0px 0px; 
-    border-radius: 0 0 25px 90px;
-    box-shadow: 10px 14px 80px 7px rgba(0, 51, 102, 0.3);
+    background: linear-gradient(160deg, var(--primary) 0%, #1e40af 100%);
+    width: 100%;
+    padding: 72px 40px;
+    border-radius: 0;
+    box-shadow: var(--shadow-blue-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.atendimento_info_secundario::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.atendimento_info_secundario::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .atendimento_info_secundario h2 {
-    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 45px;
-    line-height: 1.4em;
-    max-width: 15ch;
-    margin: 0 auto;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    font-size: 40px;
+    line-height: 1.25;
+    max-width: 14ch;
+    margin: 0 auto 16px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
 }
 
 .atendimento_info_secundario p {
-    font-family: Open Sans, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.7em;
-    font-weight: 500;
-    width: 58ch;
+    font-size: 15px;
+    line-height: 1.75;
+    font-weight: 400;
+    max-width: 48ch;
     margin: 0 auto;
+    color: rgba(255, 255, 255, 0.88);
+    position: relative;
+    z-index: 1;
 }
 
-@media (max-width: 1270px) {
-    .atendimento .container {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .atendimento_info_primario {
-        width: 100%;
-        text-align: center;
-        padding-left: 50px;
-        padding-bottom: 50px;
-    }
-    .atendimento_horario {
-        justify-content: center;
-    }
-    .atendimento_info_horario {
-        margin-left: 200px;
-    }
-    .atendimento_info_secundario {
-        color: #ffffff;
-        text-align: center;
-        background-color: #003EAA;
-        width: 98%;
-        padding: 50px 0px 0px 0px; 
-        border-radius: 25px 25px 25px 25px;
-        box-shadow: 10px 14px 80px 7px rgba(0, 51, 102, 0.3);
-    }
+.atendimento_info_secundario .botao {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    box-shadow: none;
+    letter-spacing: 0.05em;
+}
+
+.atendimento_info_secundario .botao:hover {
+    background: #ffffff;
+    color: var(--primary-dark);
+    border-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 768px) {
-    .atendimento_info_primario {
-        padding: 0px 10px 50px 10px;
-    }
-}
-
-@media (max-width: 550px) {
-    .atendimento_info_primario h2 {
-        font-size: 25px;
-        padding-right: 0px;
-    }
-    .atendimento_info_primario {
-        width: 95%;
-        text-align: center;
-        padding-left: 50px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    .atendimento_horario {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .atendimento_info_horario {
-        margin-bottom: 50px;
-        margin-left: 0px;
-    }
     .atendimento_info_secundario {
-        width: 95%;
+        padding: 56px 24px;
     }
-    .atendimento_info_secundario p {
-        width: 38ch;
+
+    .atendimento_info_secundario h2 {
+        font-size: 32px;
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
     .atendimento_info_secundario h2 {
-        font-size: 35px;
+        font-size: 28px;
     }
+
     .atendimento_info_secundario p {
-        width: 28ch;
-        margin-bottom: 0px;
+        max-width: 36ch;
     }
 }

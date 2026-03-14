@@ -1,77 +1,135 @@
 .duvidas {
-    padding-bottom: 50px;
+    padding: 96px 0 80px;
+    background: var(--bg);
 }
 
 .duvidas .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 48px;
 }
 
 .duvidas h2 {
-    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif;
+    font-family: var(--font-heading);
     text-align: center;
     font-weight: 700;
-    font-size: 40px;
-    color: #333;
-    margin-top: 80px;
-    margin-bottom: 15px;
+    font-size: 38px;
+    color: var(--dark);
+    margin-bottom: 12px;
+    line-height: 1.2;
 }
 
 .duvidas_subtitulo {
     text-align: center;
-    color: #666666;
-    max-width: 60ch;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    color: var(--text-light);
+    max-width: 56ch;
+    margin: 0 auto 56px;
+    font-size: 15px;
+    line-height: 1.65;
 }
 
 .duvidas .container div {
-    max-width: 450px;
+    max-width: 460px;
+    width: 100%;
 }
 
 .duvidas h4 {
-    color: #0059C3;
-    font-size: 21px;
+    color: var(--dark);
+    font-size: 16px;
     font-weight: 600;
-    margin: 35px 0 10px 0;
     cursor: pointer;
+    padding: 18px 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.25s ease;
+    background: var(--bg);
+    line-height: 1.4;
+}
+
+.duvidas h4:hover {
+    border-color: var(--border-blue);
+    background: var(--bg-blue);
+    color: var(--primary-dark);
+}
+
+.duvidas h4.ativo {
+    background: var(--bg-blue);
+    border-color: var(--primary-light);
+    color: var(--primary-dark);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
 .duvidas h4::after {
-    content: "▲";
-    margin-left: 10px;
+    content: "+";
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-left: 12px;
+    transition: transform 0.25s ease;
+    line-height: 1;
 }
+
 .duvidas h4.ativo::after {
-    content: "▼";
-    margin-left: 10px;
+    content: "−";
+    transform: none;
 }
 
 .js .js-duvidas p {
     display: none;
-    color: #666666;
-    font-size: 15px;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.75;
+    padding: 16px 20px 20px;
+    border: 1px solid var(--primary-light);
+    border-top: none;
+    border-radius: 0 0 var(--radius) var(--radius);
+    background: var(--bg-blue);
+    margin-bottom: 8px;
 }
 
 .js .js-duvidas p.ativo {
     display: block;
+    animation: fadeDown 0.25s ease both;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 1000px) {
     .duvidas .container {
         display: grid;
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .duvidas .container div {
+        max-width: 100%;
         margin: 0 auto;
     }
+
     .duvidas_subtitulo {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 }
 
 @media (max-width: 400px) {
-    .duvidas, .duvidas_subtitulo, .duvidas .container {
-        margin: 0 10px;
+    .duvidas {
+        padding: 72px 8px 64px;
     }
 }

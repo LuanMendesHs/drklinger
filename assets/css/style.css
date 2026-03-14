@@ -19,3 +19,6 @@
 @import "./pages/servicos/habilidades.css";
 @import "./pages/servicos/atendimento.css";
 @import "./pages/servicos/convenio.css";
+
+/* Páginas internas (Sobre, Contato, Antes/Depois, Blog) */
+@import "./pages/global/paginas.css";

@@ -1,10 +1,10 @@
 .dicas {
     position: relative;
     background: url(../../../img/dicas_background2.png);
-    background-position: top;
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 750px;
+    padding: 96px 0 112px;
 }
 
 .dicas::before {
@@ -14,59 +14,151 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.8) 75%);
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.96) 0%,
+        rgba(255, 255, 255, 0.88) 40%,
+        rgba(255, 255, 255, 0.4) 75%,
+        rgba(255, 255, 255, 0) 100%
+    );
     z-index: 1;
 }
 
 .dicas .container {
     position: relative;
     z-index: 2;
-    padding-top: 50px;
+    padding-top: 0;
+    /* Layout de 2 colunas: conteúdo à esquerda, imagem de fundo à direita */
+    display: grid;
+    grid-template-columns: minmax(300px, 520px) 1fr;
+    align-items: start;
+    column-gap: 40px;
+}
+
+/* Todos os filhos diretos ficam na coluna esquerda */
+.dicas .container > * {
+    grid-column: 1;
 }
 
 .dicas h2 {
-    color: #333333;
-    margin-top: 60px;
-    font-weight: 600;
+    color: var(--dark);
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.25;
+    position: relative;
 }
 
-.dicas h3 {
-    color: #0059C3;
-    font-size: 20px;
-    margin-top: 60px;
-    font-weight: 600;
+.dicas h2::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px;
+    margin-top: 14px;
 }
 
-.dicas p {
-    color: #555555;
-    max-width: 450px;
+.dica_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-blue);
+    backdrop-filter: blur(4px);
+    transition: all 0.25s ease;
+}
+
+.dica_item:hover {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.dica_numero {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
-    font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
-    line-height: 1.5em;
-    margin-top: 15px;
+    font-weight: 700;
+}
+
+.dica_conteudo h3 {
+    color: var(--primary-dark);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.dica_conteudo p {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.dicas > .container > h3 {
+    display: none;
+}
+
+.dicas > .container > p {
+    display: none;
 }
 
 .dicas span {
-    color: #555555;
-    font-weight: 600;
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--primary);
+    font-weight: 700;
     font-size: 15px;
-    font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
-    line-height: 1.5em; 
+    background: var(--bg-blue);
+    padding: 8px 20px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-blue);
 }
 
 @media (max-width: 995px) {
     .dicas {
-        background: url("");
-        background-color: #CBDFFF;
-        text-align: center;
-        height: 650px;
+        background: none;
+        background-color: var(--bg-blue);
+        padding: 72px 0 88px;
     }
-    .dicas p {
-        margin: 0 auto;
+
+    .dicas::before {
+        display: none;
+    }
+
+    .dicas .container {
+        display: block;
+        text-align: center;
+    }
+
+    .dica_item {
+        text-align: left;
+    }
+
+    .dicas h2::after {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
-@media (max-width: 400px) {
+
+@media (max-width: 600px) {
     .dicas {
-        height: 750px;
+        padding: 56px 0 72px;
+    }
+
+    .dica_item {
+        padding: 16px;
     }
 }

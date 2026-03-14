@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com Dr. Klinger - Agende sua consulta ortodôntica em Itarema, CE.">
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Contato | Dr. Klinger Ortodontista</title>
+</head>
+<body>
+    <header class="header ativo" id="header-js">
+        <div class="container menu" id="menu-js">
+            <a href="./home.html"><img class="logo" src="./assets/img/Nova_Logo_Preta.png" alt="Logo Dr. Klinger"></a>
+            <nav class="nav">
+                <div class="icon">
+                    <div class="linha linha1"></div>
+                    <div class="linha linha2"></div>
+                    <div class="linha linha3"></div>
+                </div>
+                <div class="lista_hamburguer">
+                    <li><a class="ancora" href="./home.html">Início</a></li>
+                    <li><a class="ancora" href="./sobre.html">Sobre</a></li>
+                    <li><a class="ancora" href="./servicos.html">Serviços</a></li>
+                    <li><a class="ancora" href="./antes-depois.html">Resultados</a></li>
+                    <li><a class="ancora" href="./blog.html">Blog</a></li>
+                    <li><a class="ancora" href="./contato.html">Contato</a></li>
+                    <button class="js-botao botao">Agendar Consulta</button>
+                </div>
+                <ul>
+                    <li><a class="ancora" href="./home.html">Início</a></li>
+                    <li><a class="ancora" href="./sobre.html">Sobre</a></li>
+                    <li><a class="ancora" href="./servicos.html">Serviços</a></li>
+                    <li><a class="ancora" href="./antes-depois.html">Resultados</a></li>
+                    <li><a class="ancora" href="./blog.html">Blog</a></li>
+                    <li><a class="ancora" href="./contato.html">Contato</a></li>
+                    <button class="js-botao botao">Agendar Consulta</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="pagina_hero">
+            <div class="pagina_hero_overlay"></div>
+            <div class="container pagina_hero_content">
+                <span class="pagina_hero_badge">Estamos aqui para você</span>
+                <h1 class="pagina_hero_titulo">Entre em Contato</h1>
+                <p class="pagina_hero_subtitulo">Agende sua consulta ou tire suas dúvidas. Respondemos rapidamente pelo WhatsApp.</p>
+            </div>
+        </section>
+
+        <!-- Cards de contato -->
+        <section class="contato_info_section">
+            <div class="container contato_info_grid">
+                <div class="contato_info_card">
+                    <div class="contato_info_icone">📞</div>
+                    <h4>Telefones</h4>
+                    <p>Dr. Klinger<br><strong>(88) 9.9698-5943</strong></p>
+                    <p style="margin-top: 10px;">Clínica Caetano<br><strong>(88) 9.9670-6541</strong></p>
+                    <p style="margin-top: 10px;">Clínica Kallyne<br><strong>(88) 9.9963-5005</strong></p>
+                </div>
+                <div class="contato_info_card">
+                    <div class="contato_info_icone">📍</div>
+                    <h4>Endereços</h4>
+                    <p><strong>Clínica Dr. Caetano Neto</strong><br>Rua Franklin de Freitas, 66<br>Itarema, CE</p>
+                    <p style="margin-top: 12px;"><strong>Clínica Dra. Kallyne Menezes</strong><br>Av. João Batista Rios, 1427<br>Itarema, CE</p>
+                </div>
+                <div class="contato_info_card">
+                    <div class="contato_info_icone">💬</div>
+                    <h4>WhatsApp</h4>
+                    <p>A forma mais rápida de entrar em contato. Respondemos em minutos!</p>
+                    <button class="js-botao botao contato_whatsapp_btn">Chamar no WhatsApp</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário + Mapa -->
+        <section class="contato_principal">
+            <div class="container contato_principal_grid">
+                <!-- Formulário -->
+                <div class="contato_form_wrap">
+                    <span class="sobre_label">Fale conosco</span>
+                    <h2>Envie sua mensagem</h2>
+                    <p class="contato_form_sub">Preencha o formulário e entraremos em contato pelo WhatsApp.</p>
+
+                    <form class="contato_form" id="contato-form">
+                        <div class="contato_form_row">
+                            <div class="contato_form_group">
+                                <label for="nome">Nome completo *</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                            </div>
+                            <div class="contato_form_group">
+                                <label for="telefone">Telefone / WhatsApp *</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(88) 9.0000-0000" required>
+                            </div>
+                        </div>
+                        <div class="contato_form_group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com">
+                        </div>
+                        <div class="contato_form_group">
+                            <label for="assunto">Assunto</label>
+                            <select id="assunto" name="assunto">
+                                <option value="">Selecione um assunto</option>
+                                <option value="consulta">Agendar consulta</option>
+                                <option value="orcamento">Orçamento</option>
+                                <option value="duvida">Dúvida sobre tratamento</option>
+                                <option value="convenio">Convênios aceitos</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="contato_form_group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva sua necessidade ou dúvida..." required></textarea>
+                        </div>
+                        <button type="submit" class="botao contato_form_submit">Enviar pelo WhatsApp</button>
+                    </form>
+                </div>
+
+                <!-- Info lateral -->
+                <div class="contato_lateral">
+                    <div class="contato_lateral_card">
+                        <h4>Horário de Atendimento</h4>
+                        <ul class="contato_horarios">
+                            <li><span>Segunda – Sexta</span><strong>08:00 – 18:00</strong></li>
+                            <li><span>Sábado</span><strong>08:00 – 12:00</strong></li>
+                            <li><span>Domingo</span><strong>Fechado</strong></li>
+                        </ul>
+                    </div>
+                    <div class="contato_lateral_card">
+                        <h4>Convênios Aceitos</h4>
+                        <div class="contato_convenios">
+                            <img src="./assets/img/amil_dental.png" alt="Amil">
+                            <img src="./assets/img/logo_unimed_odonto.png" alt="Unimed">
+                            <img src="./assets/img/odontoprev-logo.png" alt="OdontoPrev">
+                            <img src="./assets/img/bradesco_dental.png" alt="Bradesco">
+                        </div>
+                    </div>
+                    <div class="contato_lateral_card contato_lateral_redes">
+                        <h4>Redes Sociais</h4>
+                        <p>Siga para dicas de saúde bucal e novidades do consultório.</p>
+                        <div class="redes">
+                            <a href="#"><img src="./assets/img/instagram.svg" alt="Instagram"></a>
+                            <a href="#"><img src="./assets/img/facebook.svg" alt="Facebook"></a>
+                            <a href="#"><img src="./assets/img/twitter.svg" alt="Twitter"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa -->
+        <section class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.63019066514!2d-39.915838224225226!3d-2.922224339604247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c1feb922ea04f3%3A0xcd26e68cd39c6d14!2sCE-085%2C%201933-1881%20-%20Itarema%2C%20CE%2C%2062590-000!5e0!3m2!1spt-BR!2sbr!4v1736354294122!5m2!1spt-BR!2sbr" width="100%" height="480" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer_div">
+                <img class="footer_logo" src="./assets/img/Nova_Logo_Branca.png" alt="Logo Dr. Klinger">
+                <p class="footer_texto">Um dentista referência traz uma experiência mais agradável de tratamento odontológico para os seus pacientes.</p>
+                <p class="footer_texto_info">Dentista-Ortodontista Klinger · CRO 7550</p>
+            </div>
+            <div class="footer_div">
+                <h3>Contatos</h3>
+                <p>Clínica Dr. Caetano Neto<br/>(88) 9.9670-6541</p>
+                <p style="margin: 12px 0;">Clínica Dra. Kallyne Menezes<br/>(88) 9.9963-5005</p>
+                <p>Klinger de Melo<br/>(88) 9.9698-5943</p>
+                <div class="redes">
+                    <a href="#"><img src="./assets/img/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="./assets/img/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="./assets/img/twitter.svg" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&#9400; 2025 · Dr. Klinger. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        // Formulário → WhatsApp
+        document.getElementById('contato-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const assunto = document.getElementById('assunto').value || 'Não informado';
+            const mensagem = document.getElementById('mensagem').value;
+            const texto = `Olá, Dr. Klinger! Meu nome é *${nome}*, meu telefone é *${telefone}*.\n\n*Assunto:* ${assunto}\n\n*Mensagem:* ${mensagem}`;
+            window.open(`https://wa.me/+5588996985943?text=${encodeURIComponent(texto)}`, '_blank');
+        });
+    </script>
+</body>
+</html>

@@ -1,46 +1,93 @@
 .convenio {
-    padding: 80px 0 100px 0;
+    padding: 80px 0 96px;
+    background: var(--bg);
 }
 
 .convenio h3 {
-    margin: 0 auto;
-    width: 250px;
     text-align: center;
-    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 25px;
-    color: #0079FF;
-    line-height: 1.6em;
-    border-bottom: 4px solid #0079FF;
+    font-size: 28px;
+    color: var(--dark);
+    margin-bottom: 8px;
+    position: relative;
+    display: inline-block;
+}
+
+.convenio_titulo_wrap {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.convenio_titulo_wrap h3 {
+    display: inline-block;
+}
+
+.convenio_titulo_wrap h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px;
+    margin: 10px auto 0;
+}
+
+.convenio > .container > h3 {
+    display: block;
+    text-align: center;
+    margin: 0 auto 56px;
+    padding-bottom: 12px;
+    border-bottom: 4px solid var(--primary);
+    max-width: max-content;
+    color: var(--primary);
 }
 
 .convenio_img {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding-top: 70px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .convenio_img img {
-    max-width: 100%;
+    max-width: 160px;
     height: auto;
     object-fit: contain;
-    max-height: 100px;
+    max-height: 80px;
+    filter: grayscale(30%);
+    opacity: 0.85;
+    transition: all 0.3s ease;
+    padding: 16px 24px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--bg);
 }
 
-@media (max-width: 1100px) {
+.convenio_img img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    border-color: var(--border-blue);
+}
+
+@media (max-width: 900px) {
     .convenio_img {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-        justify-self: center;
-        padding-top: 70px;
-    } 
+        gap: 24px;
+    }
+
+    .convenio_img img {
+        max-width: 130px;
+    }
 }
 
 @media (max-width: 650px) {
     .convenio_img {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 16px;
     }
 }

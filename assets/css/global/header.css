@@ -1,9 +1,10 @@
 .header {
     width: 100%;
-    background-color: white;
-    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.98);
+    z-index: 100;
     opacity: 1;
-    transition: 0.2s;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
 
 .menu {
@@ -12,121 +13,265 @@
     gap: 20px;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     position: relative;
+    z-index: 10;
+}
+
+/* Logo fica acima do overlay mobile */
+.menu > a {
+    position: relative;
+    z-index: 11;
 }
 
 .logo {
-    width: 200px;
-    height: 80px;
-    transition: 0.2s;
+    width: 180px;
+    height: 72px;
+    transition: all 0.3s ease;
+    object-fit: contain;
 }
 
 .menu ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 4px;
+    align-items: center;
 }
 
 .lista_hamburguer {
     display: none;
     width: 100%;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     justify-items: center;
     background-color: white;
     position: absolute;
     top: 100px;
-    right: 0px;
+    right: 0;
     z-index: 5;
-    padding: 20px 10px;    
+    padding: 24px 16px;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+    gap: 6px;
+    border-top: 1px solid var(--border);
 }
 
 .menu .ancora {
     display: inline-block;
-    padding: 14px 0px;
+    padding: 8px 16px;
     position: relative;
-    color: #004488;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s ease;
 }
 
 .menu .ancora::after {
-    content: "";
+    content: '';
     display: block;
-    height: 2px;
-    width: 0px;
-    background-color: #0059C3;
-    margin-top: 4px;
-    transition: 0.3s;
     position: absolute;
+    bottom: 2px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease;
 }
 
-.menu .ancora:hover:after {
-    width: 100%;
+.menu .ancora:hover {
+    color: var(--primary);
+}
+
+.menu .ancora:hover::after {
+    transform: scaleX(1);
+}
+
+.menu .ancora--ativa {
+    color: var(--primary);
+}
+
+.menu .ancora--ativa::after {
+    transform: scaleX(1);
 }
 
 .js .header.ativo {
     width: 100%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     position: sticky;
     top: 0;
-    z-index: 3;
-    opacity: 0.95;
-    transition: 0.2s;
+    z-index: 200;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.header {
+    position: relative;
+    z-index: 200;
 }
 
 .js .ativo .logo {
-    width: 125px;
-    height: 55px;
-    transition: 0.2s;
+    width: 130px;
+    height: 52px;
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
     .nav ul {
         display: none;
     }
+
+    /* Ícone hamburguer — fica acima do overlay */
     .icon {
-        width: 40px;
-        height: 30px;
-        margin: 10px;
+        width: 32px;
+        height: 22px;
+        margin: 8px;
         cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
+        z-index: 10;
     }
-    
+
     .linha {
-        width: 33px;
-        height: 5px;
-        background-color: #003EAA;
-        transition: .2s;
+        width: 100%;
+        height: 2.5px;
+        background: var(--primary-dark);
+        border-radius: 2px;
+        transition: all 0.3s ease;
     }
 
-    .linha1 {
-        transform: rotateZ(0deg);
-        transform-origin: left bottom;
-    }
-    .linha3 {
-        transform: rotateZ(0deg);
-        transform-origin: left top;
+    .linha1 { transform-origin: left bottom; }
+    .linha3 { transform-origin: left top; }
+
+    .js .ativa .linha1 { transform: rotateZ(45deg) translate(1px, -1px); }
+    .js .ativa .linha2 { width: 0; opacity: 0; }
+    .js .ativa .linha3 { transform: rotateZ(-45deg) translate(1px, 1px); }
+
+    /* Painel que desce do topo */
+    .lista_hamburguer {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: auto;
+        width: 100vw;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 84px 32px 32px;
+        z-index: 2;
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+        /* Estado oculto: sobe para fora do topo */
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(-50%) translateY(-100%);
+        transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 0;
+        border-top: none;
     }
 
-    .js .ativa .linha1 {
-        transform:rotateZ(45deg);
-        transform-origin: left bottom;
-    }
-    .js .ativa .linha2 {
-        width: 0;
-    }
-    .js .ativa .linha3 {
-        transform: rotateZ(-45deg);
-    }
     .js .lista_hamburguer.ativa {
-        display: grid;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+        display: flex;
     }
-    .js .lista_hamburguer.ativa a {
-        margin-bottom: 20px;
+
+    /* Itens do menu mobile */
+    .lista_hamburguer li {
+        width: 100%;
+        max-width: 300px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
     }
-    .js .lista_hamburguer.ativo {
-        top: 70px;
+
+    .lista_hamburguer .ancora {
+        display: inline-flex;
+        align-items: center;
+        width: auto; /* apenas a largura do texto */
+        padding: 16px 4px;
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--dark);
+        border-radius: 0;
+        position: relative;
+        transition: color 0.2s ease;
     }
+
+    /* Linha gradiente exatamente sob o texto */
+    .lista_hamburguer .ancora::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        border-radius: 2px;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.3s ease;
+    }
+
+    .lista_hamburguer .ancora:hover {
+        color: var(--primary);
+    }
+
+    .lista_hamburguer .ancora:hover::after,
+    .lista_hamburguer .ancora--ativa::after {
+        transform: scaleX(1);
+    }
+
+    .lista_hamburguer .ancora--ativa {
+        color: var(--primary);
+    }
+
+    /* Separador abaixo de cada item */
+    .lista_hamburguer li {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .lista_hamburguer li:last-of-type,
+    .lista_hamburguer li:has(+ .botao) {
+        border-bottom: none;
+    }
+
+    /* Botão Agendar no mobile */
+    .lista_hamburguer .botao {
+        margin-top: 28px;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        font-size: 14px;
+        padding: 13px 20px;
+    }
+
+}
+
+/* Backdrop do menu mobile (adicionado via JS ao body) */
+.menu_backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.menu_backdrop.ativo {
+    opacity: 1;
+    pointer-events: auto;
 }

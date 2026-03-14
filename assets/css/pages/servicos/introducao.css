@@ -4,7 +4,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 950px;
+    min-height: 900px;
+    display: flex;
+    align-items: center;
 }
 
 .introducao::before {
@@ -14,65 +16,98 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.85) 50%);
+    background: linear-gradient(
+        to right,
+        rgba(15, 23, 42, 0.88) 0%,
+        rgba(15, 23, 42, 0.65) 40%,
+        rgba(15, 23, 42, 0.2) 80%,
+        rgba(15, 23, 42, 0.05) 100%
+    );
     z-index: 1;
 }
 
 .introducao .container {
     position: relative;
     z-index: 2;
-    padding-top: 200px;
+    padding-top: 120px;
+    padding-bottom: 80px;
 }
 
 h1 {
-    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 58px;
-    line-height: 1.1em;
+    line-height: 1.1;
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+    max-width: 560px;
 }
 
 .introducao .subtitulo {
-    font-size: 22px;
-    color: #777777;
-    line-height: 1.6em;
-    margin-top: 10px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.80);
+    line-height: 1.6;
+    margin-top: 16px;
+    max-width: 400px;
 }
 
 .introducao_qualificacoes {
     display: flex;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 24px;
+    gap: 14px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: max-content;
+    transition: all 0.25s ease;
+}
+
+.introducao_qualificacoes:hover {
+    background: rgba(255, 255, 255, 0.16);
 }
 
 .introducao_qualificacoes img {
-    width: 50px;
-    height: 50px;
-    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+    filter: invert(1);
 }
 
 .introducao_qualificacoes p {
-    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif;
+    font-family: var(--font-heading);
     font-weight: 600;
-    font-size: 23px;
-    line-height: 1.6em;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1;
 }
 
 @media (max-width: 768px) {
     .introducao {
-        background: url("");
-        background-color: #CBDFFF;
-        height: 950px;
+        background: none;
+        background-color: var(--navy);
+        min-height: 900px;
+    }
+
+    .introducao::before {
+        background: linear-gradient(180deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.95) 100%);
+    }
+
+    h1 {
+        font-size: 44px;
     }
 }
 
 @media (max-width: 450px) {
     .introducao {
-        height: 1100px;
+        min-height: 1000px;
     }
 }
 
 @media (max-width: 400px) {
     h1 {
-        font-size: 48px;
+        font-size: 36px;
     }
 }

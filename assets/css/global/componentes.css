@@ -1,118 +1,138 @@
 .container {
     box-sizing: border-box;
     max-width: 1250px;
-    padding: 20px 20px;
+    padding: 20px 24px;
     margin-left: auto;
     margin-right: auto;
     transition: 0.2s;
 }
 
 .botao {
-    background: #52A8FF;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     display: inline-block;
-    padding: 13px 30px;
-    border-radius: 25px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    padding: 11px 26px;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-blue);
     text-transform: uppercase;
+    letter-spacing: 0.06em;
     color: #FFF;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 600;
     max-width: max-content;
     border: none;
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.25s ease;
 }
 
 .botao:hover {
-    background: #1E6FB3;
-    transition: 0.2s;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1e40af 100%);
+    box-shadow: var(--shadow-blue-lg);
+    transform: translateY(-1px);
+    color: white;
+}
+
+.botao:active {
+    transform: translateY(0);
 }
 
 .botao_secundario {
-    background: #0079ff;
-    padding: 20px 50px;
-    margin-top: 60px;
-    margin-bottom: 75px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    padding: 16px 48px;
+    margin-top: 48px;
+    margin-bottom: 60px;
     position: relative;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: none;
+    letter-spacing: 0;
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.botao_secundario::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.12);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
 }
 
 .botao_secundario:hover {
-    background: #1E6FB3;
-    padding: 20px 105px;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1e40af 100%);
+    padding: 16px 64px;
+    box-shadow: 0 8px 28px rgba(37, 99, 235, 0.42);
+    transform: translateY(-2px);
+}
+
+.botao_secundario:hover::before {
+    opacity: 1;
 }
 
 .botao_secundario::after {
     content: "";
     position: absolute;
-    left: 75%; /* Coloca o símbolo fora do link */
+    left: 80%;
     transform: translateX(-50%);
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.5s, transform 0.5s; /* Transições de opacidade e transform */
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 .botao_secundario:hover::after {
-    content: "➤"; /* Define o símbolo na interação */
-    opacity: 1; /* Faz o símbolo aparecer */
-    transform: translateX(5px); /* Move o símbolo para a direita */
-    transition: 0.2s;
+    content: "→";
+    opacity: 1;
+    transform: translateX(4px);
 }
 
 .js .ativo .container {
     box-sizing: border-box;
     max-width: 1100px;
-    padding: 10px 20px;
+    padding: 10px 24px;
     margin-left: auto;
     margin-right: auto;
     transition: 0.2s;
 }
 
 .js .ativo .botao {
-    background: #52A8FF;
-    display: inline-block;
-    padding: 20px 105px;
-    border-radius: 25px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-    text-transform: uppercase;
-    color: #FFF;
+    padding: 10px 22px;
     font-size: 12px;
-    max-width: max-content;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s;
 }
 
 .js .ativo .botao:hover {
-    background: #1E6FB3;
-    transition: 0.2s;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1e40af 100%);
+    transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {
     .botao {
-        padding: 20px 105px;
+        padding: 13px 32px;
     }
-    
+
     .js .ativo .botao {
-        padding: 20px 105px;
-    } 
+        padding: 13px 32px;
+    }
 }
 
 @media (max-width: 470px) {
     .botao {
-        padding: 15px 70px;
+        padding: 13px 24px;
     }
+
     .js .ativo .botao {
-        padding: 15px 70px;
-    } 
+        padding: 13px 24px;
+    }
+
     .botao_secundario {
-        padding: 20px 50px;
+        padding: 16px 40px;
     }
+
     .botao_secundario:hover {
-        background: #1E6FB3;
-        padding: 20px 50px;
+        padding: 16px 40px;
     }
+
     .botao_secundario::after {
-        left: 82%;
+        left: 86%;
     }
 }

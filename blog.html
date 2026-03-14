@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog do Dr. Klinger - Dicas de saúde bucal, cuidados com aparelho e orientações ortodônticas.">
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Blog | Dr. Klinger Ortodontista</title>
+</head>
+<body>
+    <header class="header ativo" id="header-js">
+        <div class="container menu" id="menu-js">
+            <a href="./home.html"><img class="logo" src="./assets/img/Nova_Logo_Preta.png" alt="Logo Dr. Klinger"></a>
+            <nav class="nav">
+                <div class="icon">
+                    <div class="linha linha1"></div>
+                    <div class="linha linha2"></div>
+                    <div class="linha linha3"></div>
+                </div>
+                <div class="lista_hamburguer">
+                    <li><a class="ancora" href="./home.html">Início</a></li>
+                    <li><a class="ancora" href="./sobre.html">Sobre</a></li>
+                    <li><a class="ancora" href="./servicos.html">Serviços</a></li>
+                    <li><a class="ancora" href="./antes-depois.html">Resultados</a></li>
+                    <li><a class="ancora" href="./blog.html">Blog</a></li>
+                    <li><a class="ancora" href="./contato.html">Contato</a></li>
+                    <button class="js-botao botao">Agendar Consulta</button>
+                </div>
+                <ul>
+                    <li><a class="ancora" href="./home.html">Início</a></li>
+                    <li><a class="ancora" href="./sobre.html">Sobre</a></li>
+                    <li><a class="ancora" href="./servicos.html">Serviços</a></li>
+                    <li><a class="ancora" href="./antes-depois.html">Resultados</a></li>
+                    <li><a class="ancora" href="./blog.html">Blog</a></li>
+                    <li><a class="ancora" href="./contato.html">Contato</a></li>
+                    <button class="js-botao botao">Agendar Consulta</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="pagina_hero">
+            <div class="pagina_hero_overlay"></div>
+            <div class="container pagina_hero_content">
+                <span class="pagina_hero_badge">Saúde & Informação</span>
+                <h1 class="pagina_hero_titulo">Blog do<br>Dr. Klinger</h1>
+                <p class="pagina_hero_subtitulo">Dicas de saúde bucal, cuidados com aparelho e tudo sobre ortodontia para você.</p>
+            </div>
+        </section>
+
+        <!-- Artigo destaque -->
+        <section class="blog_destaque_section">
+            <div class="container">
+                <div class="blog_destaque">
+                    <div class="blog_destaque_img">
+                        <div class="blog_destaque_placeholder">
+                            <span>🦷</span>
+                        </div>
+                        <span class="blog_destaque_badge">Em destaque</span>
+                    </div>
+                    <div class="blog_destaque_texto">
+                        <span class="blog_categoria">Ortodontia</span>
+                        <h2>Como funciona o tratamento ortodôntico? Guia completo para iniciantes</h2>
+                        <p>Se você está pensando em iniciar um tratamento ortodôntico, ou acabou de começar, este guia vai te ajudar a entender cada etapa, o que esperar e como cuidar do seu aparelho para ter os melhores resultados.</p>
+                        <div class="blog_destaque_meta">
+                            <span>📅 Janeiro de 2025</span>
+                            <span>⏱ 5 min de leitura</span>
+                        </div>
+                        <a href="./artigos/tratamento-ortodontico.html" class="botao">Ler artigo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de artigos -->
+        <section class="blog_grid_section">
+            <div class="container">
+                <div class="blog_section_header">
+                    <h2>Artigos recentes</h2>
+                    <div class="blog_categorias_filtro">
+                        <button class="blog_cat_btn ativo" data-cat="todos">Todos</button>
+                        <button class="blog_cat_btn" data-cat="higiene">Higiene</button>
+                        <button class="blog_cat_btn" data-cat="aparelho">Aparelho</button>
+                        <button class="blog_cat_btn" data-cat="infantil">Infantil</button>
+                        <button class="blog_cat_btn" data-cat="dicas">Dicas Gerais</button>
+                    </div>
+                </div>
+
+                <div class="blog_grid" id="blog-grid">
+
+                    <article class="blog_card" data-categoria="higiene">
+                        <div class="blog_card_img blog_card_img--1">
+                            <span>🪥</span>
+                            <span class="blog_cat_tag">Higiene</span>
+                        </div>
+                        <div class="blog_card_body">
+                            <h3>Como escovar os dentes corretamente com aparelho fixo</h3>
+                            <p>Usar aparelho fixo exige cuidados especiais na escovação. Veja o passo a passo para manter os dentes limpos e saudáveis.</p>
+                            <div class="blog_card_footer">
+                                <span>📅 Dez 2024</span>
+                                <a href="./artigos/escovacao-aparelho.html">Ler mais →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog_card" data-categoria="aparelho">
+                        <div class="blog_card_img blog_card_img--2">
+                            <span>🍎</span>
+                            <span class="blog_cat_tag">Aparelho</span>
+                        </div>
+                        <div class="blog_card_body">
+                            <h3>Alimentos que você deve evitar com aparelho ortodôntico</h3>
+                            <p>Alguns alimentos podem danificar o aparelho ou dificultar a higienização. Saiba o que evitar durante o tratamento.</p>
+                            <div class="blog_card_footer">
+                                <span>📅 Nov 2024</span>
+                                <a href="./artigos/alimentos-aparelho.html">Ler mais →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog_card" data-categoria="infantil">
+                        <div class="blog_card_img blog_card_img--3">
+                            <span>👶</span>
+                            <span class="blog_cat_tag">Infantil</span>
+                        </div>
+                        <div class="blog_card_body">
+                            <h3>Qual a melhor idade para meu filho começar o tratamento ortodôntico?</h3>
+                            <p>A avaliação precoce é fundamental para identificar problemas no desenvolvimento da arcada dentária.</p>
+                            <div class="blog_card_footer">
+                                <span>📅 Out 2024</span>
+                                <a href="./artigos/idade-ortodontia-infantil.html">Ler mais →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog_card" data-categoria="higiene">
+                        <div class="blog_card_img blog_card_img--4">
+                            <span>🧵</span>
+                            <span class="blog_cat_tag">Higiene</span>
+                        </div>
+                        <div class="blog_card_body">
+                            <h3>Fio dental com aparelho: como usar e por que é indispensável</h3>
+                            <p>Usar fio dental com aparelho pode parecer difícil, mas com a técnica certa se torna fácil e essencial.</p>
+                            <div class="blog_card_footer">
+                                <span>📅 Set 2024</span>
+                                <a href="./artigos/fio-dental-aparelho.html">Ler mais →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog_card" data-categoria="aparelho">
+                        <div class="blog_card_img blog_card_img--5">
+                            <span>💎</span>
+                            <span class="blog_cat_tag">Aparelho</span>
+                        </div>
+                        <div class="blog_card_body">
+                            <h3>Aparelho de safira vs. metálico: qual escolher?</h3>
+                            <p>Entenda as diferenças entre os tipos de aparelho fixo, custo, estética e eficácia de cada um.</p>
+                            <div class="blog_card_footer">
+                                <span>📅 Ago 2024</span>
+                                <a href="./artigos/safira-vs-metalico.html">Ler mais →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog_card" data-categoria="dicas">
+                        <div class="blog_card_img blog_card_img--6">
+                            <span>✨</span>
+                            <span class="blog_cat_tag">Dicas Gerais</span>
+                        </div>
+                        <div class="blog_card_body">
+                            <h3>Clareamento dental: o que é, como funciona e quando fazer</h3>
+                            <p>O clareamento dental é um dos procedimentos mais procurados. Veja se você é um candidato ideal e os cuidados necessários.</p>
+                            <div class="blog_card_footer">
+                                <span>📅 Jul 2024</span>
+                                <a href="./artigos/clareamento-dental.html">Ler mais →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Nenhum resultado -->
+                <div class="blog_vazio" id="blog-vazio" style="display:none;">
+                    <span>😕</span>
+                    <p>Nenhum artigo encontrado nesta categoria.</p>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="blog_newsletter">
+                    <div class="blog_newsletter_texto">
+                        <h3>Receba dicas de saúde bucal</h3>
+                        <p>Cadastre seu WhatsApp e receba conteúdos exclusivos do Dr. Klinger.</p>
+                    </div>
+                    <button class="js-botao botao">Receber dicas pelo WhatsApp</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer_div">
+                <img class="footer_logo" src="./assets/img/Nova_Logo_Branca.png" alt="Logo Dr. Klinger">
+                <p class="footer_texto">Um dentista referência traz uma experiência mais agradável de tratamento odontológico para os seus pacientes.</p>
+                <p class="footer_texto_info">Dentista-Ortodontista Klinger · CRO 7550</p>
+            </div>
+            <div class="footer_div">
+                <h3>Contatos</h3>
+                <p>Clínica Dr. Caetano Neto<br/>(88) 9.9670-6541</p>
+                <p style="margin: 12px 0;">Clínica Dra. Kallyne Menezes<br/>(88) 9.9963-5005</p>
+                <p>Klinger de Melo<br/>(88) 9.9698-5943</p>
+                <div class="redes">
+                    <a href="#"><img src="./assets/img/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="./assets/img/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="./assets/img/twitter.svg" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&#9400; 2025 · Dr. Klinger. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        // Filtro de categorias do blog
+        const catBtns = document.querySelectorAll('.blog_cat_btn');
+        const artigos = document.querySelectorAll('.blog_card');
+        const vazio = document.getElementById('blog-vazio');
+
+        catBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Atualiza botão ativo
+                catBtns.forEach(b => b.classList.remove('ativo'));
+                btn.classList.add('ativo');
+
+                const cat = btn.dataset.cat;
+                let visiveis = 0;
+
+                artigos.forEach(artigo => {
+                    const match = cat === 'todos' || artigo.dataset.categoria === cat;
+                    if (match) {
+                        artigo.style.display = '';
+                        artigo.style.animation = 'fadeInCard 0.3s ease both';
+                        visiveis++;
+                    } else {
+                        artigo.style.display = 'none';
+                    }
+                });
+
+                vazio.style.display = visiveis === 0 ? 'flex' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
