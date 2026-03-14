@@ -182,42 +182,44 @@ accordionList.forEach(item => {
 
 // ============================================================
 // Nav: marca link ativo conforme a página atual
+// Compatível com Vercel Clean URLs (/servicos em vez de /servicos.html)
 // ============================================================
 function initNavAtivo() {
     const links = document.querySelectorAll('.menu .ancora');
     if (!links.length) return;
 
-    const path = window.location.pathname;
+    // Remove .html e barra final do pathname para normalizar
+    // Ex: /servicos.html → /servicos  |  /servicos → /servicos
+    const path = window.location.pathname
+        .replace(/\.html$/, '')
+        .replace(/\/$/, '') || '/';
 
-    // Mapeia segmentos do path para o href correspondente no nav
+    const partes = path.split('/').filter(Boolean);
+    const pagina = partes[partes.length - 1] || '';       // último segmento
+    const pasta  = partes.length >= 2 ? partes[partes.length - 2] : ''; // penúltimo
+
+    // Mapa: nome da página/pasta → arquivo do nav
     const mapa = {
-        'home':        'home.html',
-        'sobre':       'sobre.html',
-        'servicos':    'servicos.html',
-        'antes-depois':'antes-depois.html',
-        'blog':        'blog.html',
-        'artigos':     'blog.html',   // artigos pertencem ao Blog
-        'contato':     'contato.html',
+        'home':         'home.html',
+        'sobre':        'sobre.html',
+        'servicos':     'servicos.html',
+        'antes-depois': 'antes-depois.html',
+        'blog':         'blog.html',
+        'artigos':      'blog.html',
+        'contato':      'contato.html',
     };
 
-    // Determina qual arquivo/seção estamos
-    const segmento = path.split('/').filter(Boolean).pop() || '';
-    const pasta    = path.split('/').filter(Boolean).slice(-2, -1)[0] || '';
-
-    // Identifica o href alvo
     let alvo = null;
     for (const [chave, href] of Object.entries(mapa)) {
-        if (segmento.startsWith(chave) || pasta === chave) {
+        if (pagina === chave || pasta === chave) {
             alvo = href;
             break;
         }
     }
 
     links.forEach(link => {
-        const href = link.getAttribute('href') || '';
-        // Normaliza: remove ../ e ./ para comparar apenas o nome do arquivo
-        const nomeHref = href.replace(/^(\.\.\/|\.\/)*/, '');
-        if (alvo && nomeHref === alvo) {
+        const href = (link.getAttribute('href') || '').replace(/^(\.\.\/|\.\/)*/, '');
+        if (alvo && href === alvo) {
             link.classList.add('ancora--ativa');
         }
     });
